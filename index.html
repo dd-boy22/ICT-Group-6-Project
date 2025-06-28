@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/496426d31f.js" crossorigin="anonymous"></script>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- AOS CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Title -->
+    <title>ICT Group 6 Project</title>
+</head>
+
+<body>
+
+    <!-- Navbar Section -->
+
+    <nav>
+        <h2 class="logo"><a href="index.html">FocusFrame.</a></h2>
+        <ul class="nav-links">
+            <li class="link"><a href="index.html" class="active">Home</a></li>
+            <li class="link"><a href="about.html">About</a></li>
+            <li class="link"><a href="services.html">Services</a></li>
+            <li class="link"><a href="gallery.html">Gallery</a></li>
+            <li class="link"><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- End of Navbar -->
+
+    <!-- Hero Section -->
+
+    <section id="hero">
+        <div class="content" data-aos="fade-right" data-aos-duration="1000">
+            <h3>Photography</h3>
+            <h1>Capture Life's Best Moments</h1>
+            <div class="link">
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- End of Hero -->
+
+    <!-- About Section -->
+
+    <section class="about">
+        <h2 class="heading" data-aos="fade-up" data-aos-duration="1000">About Us</h2>
+        <div class="content" data-aos="fade-up" data-aos-duration="1000">
+            <div class="image-frame">
+                <img src="./images/about1.jpg" alt="image">
+            </div>
+            <div class="info">
+                <p>
+                    FocusFrame is a passionate team of photographers dedicated to capturing your most cherished moments
+                    with creativity and care. With years of experience and a keen eye for detail, we strive to deliver
+                    stunning images that tell your unique story. Whether it's a family gathering, a milestone
+                    celebration, or a creative project, we are committed to providing a personalized and memorable
+                    photography experience for every client.
+                </p>
+                <div class="link">
+                    <a href="about.html">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--  End of About -->
+
+    <!-- Feature Section -->
+
+    <section class="feature-section">
+        <div class="feature-content" data-aos="fade-right" data-aos-duration="1200">
+            <h2>Master</h2>
+            <h1>PHOTOGRAPHY</h1>
+            <p class="subtext">Photoshoot / Videoshoot / Advertising</p>
+            <p class="description">
+                At FocusFrame, we turn your moments into timeless memories. Whether it's a family portrait, a special
+                event, or a creative photoshoot, our team brings passion and expertise to every shot. Discover the art
+                of storytelling through our lens and let us capture the essence of your story.
+            </p>
+            <a href="gallery.html" class="cta">EXPLORE OUR WORK</a>
+            <div class="social-text">Instagram</div>
+        </div>
+
+        <div class="feature-images">
+            <img src="./images/feature1.jpg" alt="Portrait 1" / data-aos="zoom-in" data-aos-duration="1200">
+            <img src="./images/feature2.jpg" alt="Portrait 2" / data-aos="zoom-in" data-aos-duration="1200">
+        </div>
+    </section>
+
+    <!-- End of Feature -->
+
+    <!-- Contact Section -->
+
+    <section class="contact">
+        <div class="left" data-aos="fade-right" data-aos-duration="1200">
+            <h2>Get In Touch</h2>
+            <p>We'd love to hear from you! Reach out for bookings or any inquiries.</p>
+        </div>
+        <div class="right" data-aos="fade-left" data-aos-duration="1200">
+            <form class="contact-form" id="contactForm" action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+        <!-- Popup Message -->
+        <div id="popupMessage" class="popup-message">
+            <div class="popup-content">
+                <span class="close-btn" id="closePopup">&times;</span>
+                <h3>Thank You!</h3>
+                <p>Your message has been sent successfully.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- End of Contact -->
+
+    <!-- Footer Section -->
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <a href="index.html">FocusFrame.</a>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="#" title="Instagram" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#" title="Facebook" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="#" title="Twitter" aria-label="Twitter">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+            </div>
+            <div class="footer-copy">
+                &copy; Group 6. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- End of Footer -->
+
+
+    <!-- JS -->
+    <script src="script.js"></script>
+
+    <!-- AOS JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

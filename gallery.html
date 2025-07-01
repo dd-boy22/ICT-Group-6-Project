@@ -31,6 +31,11 @@
 
     <nav>
         <h2 class="logo"><a href="index.html">FocusFrame.</a></h2>
+        <div class="nav-toggle" id="nav-toggle" aria-label="Open navigation" tabindex="0">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <ul class="nav-links">
             <li class="link"><a href="index.html">Home</a></li>
             <li class="link"><a href="about.html">About</a></li>
@@ -118,6 +123,21 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
         AOS.init();
+    </script>
+    <script>
+        const navToggle = document.getElementById('nav-toggle');
+        const navUl = document.querySelector('nav ul');
+        navToggle.addEventListener('click', function () {
+            navToggle.classList.toggle('active');
+            navUl.classList.toggle('show');
+        });
+        // Optional: Keyboard accessibility
+        navToggle.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                navToggle.classList.toggle('active');
+                navUl.classList.toggle('show');
+            }
+        });
     </script>
 </body>
 

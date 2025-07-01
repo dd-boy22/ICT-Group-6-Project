@@ -9,7 +9,7 @@
 
 body {
     box-sizing: border-box;
-    width: 100vw;
+    width: 100%;
     overflow-x: hidden;
 }
 
@@ -986,14 +986,237 @@ footer {
   background-color: #00cc66;
 }
 
+/* Hamburger menu styles */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  justify-content: center;
+  align-items: center;
+  z-index: 10001;
+}
+.nav-toggle span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: #6fffe9;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Show hamburger on mobile, hide nav links by default */
+@media (max-width: 900px) {
+  .nav-toggle {
+    display: flex;
+  }
+  nav ul {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100vw;
+    background: #000814;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+    display: none;
+    z-index: 10000;
+  }
+  nav ul.show {
+    display: flex;
+  }
+  nav ul li {
+    width: 100%;
+    text-align: center;
+    padding: 18px 0;
+    border-bottom: 1px solid #222;
+  }
+  nav ul li:last-child {
+    border-bottom: none;
+  }
+}
+
+/* Optional: Animate hamburger to X when open */
+.nav-toggle.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.nav-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
 /* Responsive tweaks */
 
+/* ...existing code... */
+
+/* Universal mobile responsiveness */
+@media (max-width: 900px) {
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  nav {
+    flex-direction: row;
+    height: auto;
+    padding: 16px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 9px;
+  }
+  .logo{
+    margin-left: 20px;
+  }
+  .nav-toggle{
+    margin-right: 20px;
+  }
+  .nav-links li{
+    margin-top: -12px;
+    
+ 
+  }
+  #hero {
+    padding: 0 5%;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+  #hero h1 {
+    font-size: 2.5rem;
+  }
+  .about .content,
+  .services .content1 {
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    text-align: center;
+  }
+  .about .image-frame img,
+  .services .image-frame1 img {
+    width: 90%;
+    max-width: 320px;
+    margin: 0 auto 24px auto;
+  }
+  .about .info,
+  .services .info1 {
+    padding-left: 0;
+    max-width: 100%;
+  }
+  .feature-section {
+    flex-direction: column;
+    height: auto;
+    padding: 32px 5%;
+    gap: 24px;
+  }
+  .feature-images {
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+  }
+  .feature-images img {
+    width: 90% !important;
+    max-width: 320px;
+  }
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Small mobile screens */
+@media (max-width: 600px) {
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  body {
+    font-size: 15px;
+  }
+  nav .logo a {
+    font-size: 1.3rem;
+  }
+  #hero h1 {
+    font-size: 2rem;
+  }
+  .about .heading,
+  .about-page .heading h2,
+  .services-page .hero h2,
+  .gallery-page .hero h2,
+  .contact-page .hero h2 {
+    font-size: 2rem;
+  }
+  .about .content,
+  .services .content1 {
+    gap: 16px;
+  }
+  .about .image-frame img,
+  .services .image-frame1 img {
+    width: 100%;
+    max-width: 220px;
+  }
+  .footer-container {
+    padding: 0 8px;
+    gap: 10px;
+  }
+  .footer-links {
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .feature-section {
+    padding: 16px 2%;
+  }
+  .gallery-section {
+    padding: 30px 5px;
+  }
+  .feature-content h2 {
+    font-size: 1.1rem;
+  }
+  .feature-content h1 {
+    font-size: 1.5rem;
+  }
+  .description {
+    font-size: 0.95rem;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 400px) {
+  #hero h1,
+  .about .heading,
+  .about-page .heading h2 {
+    font-size: 1.2rem;
+  }
+  .about .image-frame img,
+  .services .image-frame1 img {
+    max-width: 140px;
+  }
+  .footer-logo a {
+    font-size: 1rem;
+  }
+  .feature-content h2 {
+    font-size: 0.95rem;
+  }
+  .feature-content h1 {
+    font-size: 1.1rem;
+  }
+  .description {
+    font-size: 0.85rem;
+  }
+}
+
+/* Already present: Contact section mobile tweaks 
 @media (max-width: 520px) {
   .contact-container {
     flex-direction: column;
   }
-
   .contact-form-box, .contact-info {
     width: 100%;
   }
-}
+} */

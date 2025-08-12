@@ -1007,6 +1007,22 @@ footer {
   transition: 0.3s;
 }
 
+/*Footer names*/
+.footer-names ul li{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+  color: #bbb;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.footer-names ul li:hover {
+    color: #fff;
+}
+
 /* Show hamburger on mobile, hide nav links by default */
 @media (max-width: 900px) {
   .nav-toggle {
@@ -1170,6 +1186,9 @@ footer {
   .contact .left p {
     font-size: 1rem;
     max-width: 75%;
+  }
+  .footer-names{
+    width: 75%;
   }
 }
 
